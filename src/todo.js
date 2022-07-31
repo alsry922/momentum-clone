@@ -49,7 +49,6 @@ function setTodos() {
   const savedTodos = localStorage.getItem(TODOS_KEY);
   if (savedTodos !== null) {
     todos = JSON.parse(savedTodos);
-    console.log(todos);
     todos.forEach(addTodo);
   }
 }
