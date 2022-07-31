@@ -9,13 +9,16 @@
     <script src="src/todo.js" defer></script>
     <script src="src/api.js" type="module" defer></script>
     <script src="src/weather.js" type="module" defer></script>
+    <script src="src/background.js" defer></script>
     <script
       src="https://kit.fontawesome.com/9d65493088.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
+    <img src="https://source.unsplash.com/random" />
     <div class="info">
+      <span class="info__temperature"></span>
       <span class="info__weather"></span>
       <span class="info__city"></span>
     </div>
@@ -31,14 +34,16 @@
         maxlength="16"
       />
     </form>
-    <form id="todo-form">
-      <input
-        class="todo-input"
-        type="text"
-        required
-        placeholder="Please write things to do"
-      />
-    </form>
-    <ul class="todo-list"></ul>
+    <div class="todos">
+      <form id="todo-form">
+        <input
+          class="todo-input"
+          type="text"
+          required
+          placeholder="Please write things to do"
+        />
+      </form>
+      <ul class="todo-list"></ul>
+    </div>
   </body>
 </html>

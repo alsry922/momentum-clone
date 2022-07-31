@@ -52,7 +52,10 @@ function setTodos() {
     todos.forEach(addTodo);
   }
 }
-
+/* 
+  이벤트 버블링
+  투두리스트 중 버튼이 클릭된 요소 삭제
+*/
 function onClickTodoList(event) {
   const target = event.target;
   if (target.tagName !== "BUTTON" && target.tagName !== "I") {

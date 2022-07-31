@@ -1,5 +1,6 @@
 import { WEATHER_API } from "./api.js";
 
+const $infoTemper = document.querySelector(".info__temperature");
 const $infoWeather = document.querySelector(".info__weather");
 const $infoCity = document.querySelector(".info__city");
 
@@ -10,6 +11,7 @@ function onGeoSuccess(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+      $infoTemper.innerText = `${Math.floor(data.main.temp)}℃`;
       $infoWeather.innerText = data.weather[0].main;
       $infoCity.innerText = data.name;
     });
